@@ -1,0 +1,398 @@
+@charset "UTF-8";
+/*-------------------------------------*/
+/*  base
+/*-------------------------------------*/
+html {
+    font-size: 100%;
+    /* スムーズスクロール */
+    scroll-behavior: smooth;
+}
+body {
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+.wrapper {
+    position: relative;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+.container {
+    max-width: 9;
+    margin: 0 auto;
+    background-color:lightcyan;
+}
+.sec-heading {
+    text-align: center;
+    color: var(--violet);
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+  }
+li {
+    list-style: none;
+}
+.clear {
+    clear: both;
+}
+  /*
+COLORS
+================================================ */
+:root {
+    --light-blue: #4db1ec;
+    --blue: #1665cc;
+    --purple: #b473bf;
+    --pink: #ffb2c1;
+    --orange: #ff9f67;
+    --yellow: #ffd673;
+    --light-green: #a2e29b;
+    --green: #00a2af;
+    --grey: #333;
+    --white: #fff;
+    --violet: #391E88;
+}
+/*-------------------------------------*/
+/*  header
+/*-------------------------------------*/
+.header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 10;
+}
+.logo a{
+    color: var(--violet);
+    font-size: 30px;
+}
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3px;
+    color: var(--violet);
+}
+.item-list {
+    margin-right: 20px;
+}
+.item-list:last-child {
+    margin: 0;
+}
+.gr-link {
+    position: relative;
+    display: block;
+    color: var(--violet);
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: bold;
+}
+.gr-link:hover{
+    opacity: .6;
+}
+
+/*-------------------------------------*/
+/*  fv
+/*-------------------------------------*/
+#first-view {
+    background-color: var(--light-blue);
+    background-image: url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: screen;
+    animation: bg-color 24s infinite;
+    padding-top: 70px;
+    display: block;
+    align-items: center;
+}
+@keyframes bg-color {
+    0% { background-color: var(--light-blue); }
+    12.5% { background-color: var(--blue); }
+    25% { background-color: var(--purple); }
+    37.5% { background-color: var(--pink); }
+    50% { background-color: var(--orange); }
+    62.5% { background-color: var(--yellow); }
+    75% { background-color: var(--light-green); }
+    87.5% { background-color: var(--green); }
+    100% { background-color: var(--light-blue); }
+}
+.fv-center {
+    margin: 200px auto;
+}
+.fv-ttl {
+    text-align: center;
+    color: var(--violet);
+}
+.main-ttl {
+    font-size: 72px;
+    font-weight: bold;
+}
+.sub-ttl {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 40px 0;
+}
+.contact-btn {
+    display: inline-block;
+    width: 220px;
+    border: 1px solid var(--violet);
+    border-radius: 50px;
+}
+.contact-btn a {    
+    display: block;
+    color: var(--violet);
+    font-size: 15px;
+    line-height: 50px;
+    padding: 0 50px;
+}
+.contact-btn:hover {
+    background-color: #fff;
+    opacity: .6;
+}
+/*-------------------------------------*/
+/*  sec01 NEWS
+/*-------------------------------------*/
+.inner {
+    max-width: 950px;
+    margin: 70px auto;
+}
+.news-content {
+    display: flex;
+}
+.news-list li{
+    display: flex;
+    padding-bottom: 20px;
+}
+.news-list li:last-of-type {
+    padding: 0;
+}
+.category {
+    display: flex;
+}
+.sec-ttl {
+    font-size: 36px;
+    font-weight: bold;
+}
+.sec-ttl span{
+    display: block;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.category time {
+    margin-right: 20px;
+}
+.info {
+    margin-right: 20px;
+}
+.news-list-label {
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    margin-right: 20px;
+}
+.label-info {
+    display: block;
+    width: 80px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 10px 2px;
+}
+/*-------------------------------------*/
+/*  sec02 SERVICE
+/*-------------------------------------*/
+.card {
+    width: 350px;
+}
+.card-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.box {
+    display: flex;
+}
+.card-img {
+    width: 100%;
+    height: 200px;
+}
+.fa-paint-brush,
+.fa-laptop-code,
+.fa-file-image {
+    font-size: 35px;
+    padding: 0 20px 10px;
+}
+.card-ttl {
+    font-size: 21px;
+    font-weight: bold;
+    padding: 10px;
+}
+.card-txt {
+    font-size: 15px;
+    padding: 10px;
+}
+.canpany-btn {
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    background: linear-gradient(#7633a4 0%, #250d65 100%);
+    text-align: center;
+}
+.canpany-btn a {
+    display: block;
+    font-size: 14px;
+    color: var(--white);
+    padding: 25px 60px;
+}
+.btn-position {
+    width: 200px;
+    margin: 20px auto;
+}
+/*-------------------------------------*/
+/*  sec03 WORKS
+/*-------------------------------------*/
+
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:65%;
+    float: left;
+    margin-top: 60px;
+}
+
+.slider img {
+    width: 45vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    max-height: 510px;
+}
+
+.slider .slick-slide {
+    transform: scale(0.8);/*左右画像のサイズ80％
+   transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+   opacity: 0.5;
+}
+
+.slider .slick-slide.slick-center{
+   transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+   opacity: 1;/*透過なし*/
+} 
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+  margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+  margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+  background:#eee;
+}
+
+h2,p {
+    text-align:center;
+    padding:20px;
+}
+
+ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  color: #333;
+}
+
+a:hover,
+a:active{
+  text-decoration: none;
+}
+
+/* スライダー右側のコンテンツ */
+.slider-right {
+    max-width: 900px;
+    min-height: 600px;
+    background-color: #ddd;
+    margin-left: auto;
+    padding-top: 150px;
+}
+.slider-right-ttl {
+    width: 41%;
+    margin-left: 56%;
+    padding-top: 40px;
+    padding-left: 50px;
+    line-height: 1.5rem;
+}
+.btn-position02 {
+    width: 200px;
+    margin-left: 67%;
+}
+
+@media(max-width:650px) {
+    .slider {
+        width: 90%;
+        float: none;
+    }
+    .slider-right {
+        width: 90%;
+    }
+}
+
+/*-------------------------------------*/
+/*  sec04 COMPANY
+/*-------------------------------------*/
+.goal {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+.support {
+    text-align: center;
+    line-height: 1.5rem;
+}
