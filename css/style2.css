@@ -1,3 +1,6 @@
+.description {
+    padding: 50px 0 100px;
+}
 .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
     width:65%;
     margin:0 auto;
